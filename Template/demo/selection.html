@@ -1,0 +1,19 @@
+\
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Family</title>
+</head>
+<body>
+<h1>Surname:{{Surnames}}</h1>
+
+<div>
+    \{% for Member in Members %}
+<b>Surname:</b><p>{{Member.initial}}</p>
+<b>Name:</b><p>{{Member.persons_name}}</p>
+{% endfor %}
+</div>
+</body>
+</html>

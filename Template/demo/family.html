@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+<!--{{Surnames}}-->
+<!--{{Members}}-->
+<h2>this is family info. with surnames</h2>
+<div>
+    <p>the surnames are:</p>
+    {% for Surname in Surnames %}
+
+    <p><a href="/selection{{Surname.id}}/">{{Surname.family_name}}</a></p>
+    {% endfor %}
+</div>
+
+<div>
+    {% for Member in Members %}
+<b>Surname:</b><p>{{Member.initial}}</p>
+<b>Name:</b><p>{{Member.persons_name}}</p>
+{% endfor %}
+</div>
+
+
+{% endblock content %}
